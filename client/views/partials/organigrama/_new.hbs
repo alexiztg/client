@@ -1,0 +1,41 @@
+<form class="ui form">
+  <div class="one field">
+  <div class="field">
+    <label for="periodo_id">periodo_id</label>
+    <select id="periodo_id" class="ui fluid dropdown" ng-model="new_organigrama.periodo_id" ng-options="item.id as item.nombre for item in coleccion">
+    </select>
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="organigrama_id">organigrama_id</label>
+    <input type="text" id="organigrama_id" ng-model="new_organigrama.organigrama_id" maxlength="36">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="empleado">empleado</label>
+    <input type="number" id="empleado" ng-model="new_organigrama.empleado">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="supervisor">supervisor</label>
+    <input type="number" id="supervisor" ng-model="new_organigrama.supervisor">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="coordinador">coordinador</label>
+    <input type="number" id="coordinador" ng-model="new_organigrama.coordinador">
+  </div>
+</div>
+</form>
+<div class="ui error message" ng-show="new_organigrama.err" style="text-align: center;">
+  {[ new_organigrama.err ]}
+</div>
+<div class="ui positive message" ng-show="new_organigrama.id" style="text-align: center;">
+  Listo {[ new_organigrama.id ]}
+</div>
+<br>
+<button class="ui positive button right floated" ng-hide="new_organigrama.id > 0" ng-disabled="" ng-click="">Guardar</button>

@@ -1,0 +1,29 @@
+<table class="ui sortable celled compact small basic table" ng-init="currentPage = 1">
+  <thead>
+    <tr>
+     <th ng-click="orden = 'periodo_id'">periodo_id</th>
+     <th ng-click="orden = 'organigrama_id'">organigrama_id</th>
+     <th ng-click="orden = 'empleado'">empleado</th>
+     <th ng-click="orden = 'supervisor'">supervisor</th>
+     <th ng-click="orden = 'coordinador'">coordinador</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr dir-paginate="i in list_organigrama | filter: query | orderBy: orden | itemsPerPage: 12" current-page="currentPage">
+     <td class="ui right aligned">{[ i.periodo_id ]}</td>
+     <td class="ui left aligned">{[ i.organigrama_id | capitalize ]}</td>
+     <td class="ui right aligned">{[ i.empleado ]}</td>
+     <td class="ui right aligned">{[ i.supervisor ]}</td>
+     <td class="ui right aligned">{[ i.coordinador ]}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr style="text-align: center;">
+      <th colspan="100">
+        <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)">
+        </dir-pagination-controls>
+      </th>
+    </tr>
+  </tfoot>
+</table>

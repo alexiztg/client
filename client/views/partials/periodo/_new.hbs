@@ -1,0 +1,29 @@
+<form class="ui form">
+  
+<div class="one field">
+  <div class="field">
+    <label for="anyo">anyo</label>
+    <input type="number" id="anyo" ng-model="new_periodo.anyo">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="mes">mes</label>
+    <input type="number" id="mes" ng-model="new_periodo.mes">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="activo">activo</label>
+    <input type="number" id="activo" ng-model="new_periodo.activo">
+  </div>
+</div>
+</form>
+<div class="ui error message" ng-show="new_periodo.err" style="text-align: center;">
+  {[ new_periodo.err ]}
+</div>
+<div class="ui positive message" ng-show="new_periodo.id" style="text-align: center;">
+  Listo {[ new_periodo.id ]}
+</div>
+<br>
+<button class="ui positive button right floated" ng-hide="new_periodo.id > 0" ng-disabled="" ng-click="">Guardar</button>

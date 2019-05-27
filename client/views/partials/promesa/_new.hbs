@@ -1,0 +1,72 @@
+<form class="ui form">
+  <div class="one field">
+  <div class="field">
+    <label for="promesa_id">promesa_id</label>
+    <input type="text" id="promesa_id" ng-model="new_promesa.promesa_id" maxlength="36">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="periodo_id">periodo_id</label>
+    <select id="periodo_id" class="ui fluid dropdown" ng-model="new_promesa.periodo_id" ng-options="item.id as item.nombre for item in coleccion">
+    </select>
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="cliente_id">cliente_id</label>
+    <select id="cliente_id" class="ui fluid dropdown" ng-model="new_promesa.cliente_id" ng-options="item.id as item.nombre for item in coleccion">
+    </select>
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="fecha_generacion">fecha_generacion</label>
+    <input type="date" id="fecha_generacion" ng-model="new_promesa.fecha_generacion">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="no_empleado">no_empleado</label>
+    <input type="number" id="no_empleado" ng-model="new_promesa.no_empleado">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="cuenta">cuenta</label>
+    <input type="text" id="cuenta" ng-model="new_promesa.cuenta" maxlength="100">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="fecha_pago">fecha_pago</label>
+    <input type="date" id="fecha_pago" ng-model="new_promesa.fecha_pago">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="no_empleado_autoriza">no_empleado_autoriza</label>
+    <input type="number" id="no_empleado_autoriza" ng-model="new_promesa.no_empleado_autoriza">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="periodo_ID_1">periodo_ID_1</label>
+    <input type="number" id="periodo_ID_1" ng-model="new_promesa.periodo_ID_1">
+  </div>
+</div>
+<div class="one field">
+  <div class="field">
+    <label for="periodo_ID_1_1">periodo_ID_1_1</label>
+    <input type="number" id="periodo_ID_1_1" ng-model="new_promesa.periodo_ID_1_1">
+  </div>
+</div>
+</form>
+<div class="ui error message" ng-show="new_promesa.err" style="text-align: center;">
+  {[ new_promesa.err ]}
+</div>
+<div class="ui positive message" ng-show="new_promesa.id" style="text-align: center;">
+  Listo {[ new_promesa.id ]}
+</div>
+<br>
+<button class="ui positive button right floated" ng-hide="new_promesa.id > 0" ng-disabled="" ng-click="">Guardar</button>

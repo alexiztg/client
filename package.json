@@ -21,7 +21,7 @@
     "jquery": "3.2.1",
     "json-2-csv": "2.0.18",
     "lodash": "4.11.1",
-    "lodash.merge": "4.3.5",
+    "lodash.merge": "4.6.2",
     "lodash.reduce": "4.3.0",
     "lodash.uniqby": "4.3.0",
     "moment": "2.12.0",

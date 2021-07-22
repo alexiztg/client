@@ -38,7 +38,7 @@
     "socket.io": "1.4.5",
     "uuid": "^3.1.0",
     "watchify": "3.7.0",
-    "xlsx": "0.8.0",
+    "xlsx": "0.17.0",
     "xlsx-populate": "1.8.0"
   },
   "devDependencies": {
